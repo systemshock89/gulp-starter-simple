@@ -1,10 +1,10 @@
 // GENERAL PROJECT STYLES
 
 body{
-  font-family: $userfont;
-  font-size: $fontsize;
-  line-height: $lineheight;
-  color: $textcolor;
+  font-family: var(--user-font);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.65;
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
@@ -15,7 +15,7 @@ body{
 }
 
 ::selection{
-  background-color: $accent;
+  background-color: var(--accent);
   color: #fff;
 }
 

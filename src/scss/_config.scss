@@ -1,10 +1,10 @@
 // USER VARIABLES SECTION
-$accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
-$lineheight: 1.65; // Document Line Height
-$userfont: roboto-my, sans-serif; // User Font Family
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+:root {
+	--accent: orange;
+	--text-color: #333;
+	--user-font: roboto-my, sans-serif;
+	--system-font: -apple-system, BlinkMacSystemFont, Arial, sans-serif;;
+}
 
 // Bootstrap compatible gutter variable => $gutter
 //$grid-gutter-width: 20px;
