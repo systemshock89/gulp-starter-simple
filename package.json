@@ -24,6 +24,7 @@
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.3",
+    "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^8.0.0",
     "gulp-postcss": "^9.0.1",

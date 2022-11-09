@@ -12,6 +12,7 @@ const sass = gulpSass(dartSass);
 import postCss from 'gulp-postcss';
 import cssnano from 'cssnano';
 import autoprefixer from 'autoprefixer';
+import concat from 'gulp-concat';
 import {deleteAsync} from 'del';
 
 const dist = "./dist";
@@ -19,6 +20,7 @@ const dist = "./dist";
 function styles() {
     return src("./src/scss/**/*.scss")
         .pipe(sass().on('error', sass.logError))
+        .pipe(concat('bundle.min.css'))
         .pipe(dest(dist + '/css'))
         .pipe(browserSync.stream());
 }
@@ -30,6 +32,7 @@ function stylesProd() {
             autoprefixer({ grid: 'autoplace' }),
             cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
         ]))
+        .pipe(concat('bundle.min.css'))
         .pipe(dest(dist + '/css'));
 }
 
