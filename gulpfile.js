@@ -9,9 +9,9 @@ import include from 'gulp-file-include';
 import gulpSass from 'gulp-sass';
 import dartSass from 'sass';
 const sass = gulpSass(dartSass);
-// import postCss from 'gulp-postcss'
-// import cssnano from 'cssnano'
-// import autoprefixer from 'autoprefixer'
+import postCss from 'gulp-postcss';
+import cssnano from 'cssnano';
+import autoprefixer from 'autoprefixer';
 import {deleteAsync} from 'del';
 
 const dist = "./dist";
@@ -26,10 +26,10 @@ function styles() {
 function stylesProd() {
     return src("./src/scss/**/*.scss")
         .pipe(sass().on('error', sass.logError))
-        // .pipe(postCss([
-        //     autoprefixer({ grid: 'autoplace' }),
-        //     cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
-        // ]))
+        .pipe(postCss([
+            autoprefixer({ grid: 'autoplace' }),
+            cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
+        ]))
         .pipe(dest(dist + '/css'));
 }
 
