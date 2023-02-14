@@ -8,6 +8,11 @@ import changed from "gulp-changed";
 import browserSync from "browser-sync";
 
 function copyAssets() {
+    src("./src/js/libs/**/*")
+        .pipe(changed(dist + "/js/libs"))
+        .pipe(dest(dist + "/js/libs"))
+        .pipe(browserSync.stream());
+
     return src("./src/fonts/**/*")
         .pipe(changed(dist + "/fonts"))
         .pipe(dest(dist + "/fonts"))
