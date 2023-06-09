@@ -1,7 +1,6 @@
 "use strict";
 
 export const dist = "./dist";
-export const imagesType = 'webp'; // 'webp' or 'original'
 
 import pkg from 'gulp';
 const {src, dest, parallel, series, watch} = pkg;

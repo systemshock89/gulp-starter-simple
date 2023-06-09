@@ -23,7 +23,7 @@ function serve() {
 
     watch(["./src/*.html", "./src/includes/*.html"], { usePolling: true }, html);
     watch(["./src/fonts/**/*", "./src/js/libs/**/*"], { usePolling: true }, copyAssets);
-    watch('./src/img/**/*', { usePolling: true }, images);
+    watch(['./src/img/**/*', './src/img_nocompress/**/*', './src/img_noconvert/**/*'], { usePolling: true }, images);
     watch('./src/sprites/**/*', { usePolling: true }, sprites);
     watch("./src/scss/**/*", { usePolling: true }, styles);
     watch("./src/js/**/*", { usePolling: true }, scripts);
