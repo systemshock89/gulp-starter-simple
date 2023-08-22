@@ -12,17 +12,9 @@ import browserSync from "browser-sync";
 
 function images() {
 
-    // изображения из папки img_noconvert НЕ конвертируем в webp, сжимаем
-    src("./src/img_noconvert/**/*")
-        .pipe(changed(dist + "/img"))
-        .pipe(imagemin())
-        .pipe(dest(dist + "/img"))
-        .pipe(browserSync.stream());
-
-    // изображения из папки img_nocompress конвертируем в webp БЕЗ сжатия
+    // изображения из папки img_nocompress перемещаем в img БЕЗ сжатия и конвертации
     src("./src/img_nocompress/**/*")
-        .pipe(changed(dist + "/img", {extension: '.webp'}))
-        .pipe(webp())
+        .pipe(changed(dist + "/img"))
         .pipe(dest(dist + "/img"))
         .pipe(browserSync.stream());
 
