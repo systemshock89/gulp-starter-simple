@@ -5,7 +5,7 @@ import { dist, production } from "../gulpfile.js";
 import pkg from 'gulp';
 const {src, dest, parallel, series, watch} = pkg;
 import gulpSass from 'gulp-sass';
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 const sass = gulpSass(dartSass);
 import gulpif from "gulp-if";
 import sourcemaps from "gulp-sourcemaps";
