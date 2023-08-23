@@ -44,7 +44,6 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "modern-normalize": "^2.0.0",
-    "postcss-viewport-height-correction": "^1.1.1"
+    "modern-normalize": "^2.0.0"
   }
 }

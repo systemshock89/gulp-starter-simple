@@ -10,7 +10,6 @@ const sass = gulpSass(dartSass);
 import gulpif from "gulp-if";
 import sourcemaps from "gulp-sourcemaps";
 import postCss from "gulp-postcss";
-import postcssViewportHeightCorrection from "postcss-viewport-height-correction";
 import postcssSortMediaQueries from "postcss-sort-media-queries";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
@@ -21,11 +20,7 @@ function styles() {
     return src("./src/scss/main.scss")
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulpif(!production, postCss([
-            postcssViewportHeightCorrection(),
-        ])))
         .pipe(gulpif(production, postCss([
-            postcssViewportHeightCorrection(),
             postcssSortMediaQueries({sort: 'desktop-first'}),
             autoprefixer({ grid: 'autoplace' }),
             cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
