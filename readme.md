@@ -1,4 +1,4 @@
-<h1>Starter simple</h1>
+<h1>Gulp starter simple</h1>
 <p>used Gulp + Webpack</p>
 
 <h2>Tasks</h2>
@@ -16,7 +16,7 @@
 
 <h2>How to use</h2>
 <ol>
-    <li>git clone</li>
-    <li>npm i</li>
-    <li>gulp</li>
+    <li><code>git clone</code></li>
+    <li><code>npm i</code></li>
+    <li><code>gulp</code></li>
 </ol>
